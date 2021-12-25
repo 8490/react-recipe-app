@@ -17,13 +17,18 @@ const Navbar = () => {
       </Hamburger>
 
       <Menu isOpen={isOpen}>
-        <MenuLink to="/about">About</MenuLink>
+        <MenuLink to="/about" onClick={() => setIsOpen(!isOpen)}>
+          About
+        </MenuLink>
         <MenuLink
           to={{ pathname: "https://github.com/orgs/clarusway/dashboard" }}
+          onClick={() => setIsOpen(!isOpen)}
         >
           Github
         </MenuLink>
-        <MenuLink to="/login">Logout</MenuLink>
+        <MenuLink to="/login" onClick={() => setIsOpen(!isOpen)}>
+          Logout
+        </MenuLink>
       </Menu>
     </Nav>
   );
